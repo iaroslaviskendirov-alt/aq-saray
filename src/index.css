@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --color-ink: #0c0e13;
+  --color-night: #12151c;
+  --color-panel: #181c25;
+  --color-ivory: #f3ede2;
+  --color-mist: #a7a091;
+  --color-gold: #d4b06a;
+  --color-gold-deep: #a9863f;
+}
+
+html { scroll-behavior: smooth; background: var(--color-ink); color-scheme: dark; }
+body { margin: 0; background: var(--color-ink); color: var(--color-ivory); -webkit-font-smoothing: antialiased; }
+section[id] { scroll-margin-top: 72px; }
+
+/* Иконка календаря в полях дат — светлая на тёмном фоне */
+input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.8) sepia(0.5); cursor: pointer; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
