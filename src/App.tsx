@@ -472,7 +472,7 @@ function SearchBar({ today, checkIn, checkOut, guests, nights, onCheckIn, onChec
   const field = 'flex min-w-0 flex-col gap-1 px-5 py-3.5'
   const label = 'text-[11px] font-semibold tracking-[0.2em] text-gold uppercase'
   return (
-    <div className="mt-10 grid overflow-hidden rounded-3xl border border-white/10 bg-ink/70 backdrop-blur-xl md:mt-14 md:grid-cols-[1fr_1fr_1fr_auto]">
+    <div className="mt-10 grid overflow-hidden rounded-3xl border border-white/10 bg-ink/70 backdrop-blur-xl md:mt-14 md:grid-cols-3 lg:grid-cols-[1fr_1fr_1fr_auto]">
       <label className={cn(field, 'border-b border-white/10 md:border-r md:border-b-0')}>
         <span className={label}>Заезд</span>
         <input
@@ -499,7 +499,7 @@ function SearchBar({ today, checkIn, checkOut, guests, nights, onCheckIn, onChec
       <div className={cn(field, 'border-b border-white/10 md:border-r md:border-b-0')}>
         <span className={label}>Гости</span>
         <div className="flex items-center justify-between gap-3">
-          <span className="text-lg">{guestsText(guests)}</span>
+          <span className="text-lg whitespace-nowrap">{guestsText(guests)}</span>
           <div className="flex gap-2">
             <button
               type="button"
@@ -524,7 +524,7 @@ function SearchBar({ today, checkIn, checkOut, guests, nights, onCheckIn, onChec
       </div>
       <a
         href="#rooms"
-        className="m-2 flex items-center justify-center gap-2 rounded-2xl bg-gold px-8 py-4 font-semibold text-ink transition hover:bg-[#e2c486]"
+        className="m-2 flex items-center justify-center gap-2 rounded-2xl bg-gold px-8 md:col-span-3 lg:col-span-1 py-4 font-semibold text-ink transition hover:bg-[#e2c486]"
       >
         Показать номера <ArrowRight className="size-4" />
       </a>
